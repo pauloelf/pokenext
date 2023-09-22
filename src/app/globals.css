@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .button-nav {
+    @apply text-white p-1 transition duration-300 border-b-transparent border-b-2 border-solid hover:border-b-white
+  }
+}
