@@ -6,4 +6,12 @@
   .button-nav {
     @apply text-white p-1 transition duration-300 border-b-transparent border-b-2 border-solid hover:border-b-white
   }
+
+  .card {
+    @apply flex flex-col bg-[#333] text-white justify-center items-center py-8 px-4 mb-8 w-[23%] rounded-2xl border-2 border-[#e33d33] border-solid shadow-md shadow-neutral-500
+  }
+
+  .card-button {
+    @apply font-bold bg-white text-[#333] py-3 px-5 rounded-md transition duration-300 hover:bg-[#e33d33] hover:text-white
+  }
 }
