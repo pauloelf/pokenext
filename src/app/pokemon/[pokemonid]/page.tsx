@@ -34,7 +34,7 @@ export default function Pokemon() {
   if (!pokemon) return null
   return (
     <div className='flex flex-col justify-center items-center text-center'>
-    	<h1 className='text-4xl capitalize bg-[#333] text-white w-[300px] p-2 my-3'>{pokemon.name}</h1>
+    	<h1 className='text-3xl sm:text-4xl capitalize bg-[#333] text-white w-[240px] sm:w-[300px] p-2 my-3'>{pokemon.name}</h1>
       <Image
         src={pokemon.sprites.front_default}
         width='120'

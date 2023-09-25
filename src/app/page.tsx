@@ -22,7 +22,7 @@ export default async function Home() {
   return (
     <>
       <div className="flex justify-center items-center mb-8">
-        <h1 className='text-5xl text-[#e33d33] text-center'>
+        <h1 className='text-4xl sm:text-5xl text-[#e33d33] text-center'>
           Poke<span className='text-[#333] mr-2'>Next</span>
         </h1>
         <Image
@@ -33,7 +33,7 @@ export default async function Home() {
         />
       </div>
       <div>
-        <ul className="flex flex-wrap justify-between items-center px-5 max-w-5xl mx-auto">
+        <ul className="flex flex-wrap gap-6 justify-between items-center px-5 max-w-5xl mx-auto">
           {data?.results?.map((pokemon) => (
             <Card key={pokemon.name} pokemon={pokemon} />
           ))}

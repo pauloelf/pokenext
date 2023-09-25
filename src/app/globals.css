@@ -9,7 +9,7 @@
 
 /* card */
   .card {
-    @apply flex flex-col bg-[#333] text-white justify-center items-center py-8 px-4 mb-8 w-[23%] rounded-2xl border-2 border-[#e33d33] border-solid shadow-md shadow-neutral-500
+    @apply flex flex-col flex-1 basis-[200px] bg-[#333] text-white justify-center items-center py-8 px-4 rounded-2xl border-2 border-[#e33d33] border-solid shadow-md shadow-neutral-500
   }
 
   .card-button {
