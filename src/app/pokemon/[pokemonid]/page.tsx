@@ -4,15 +4,32 @@ import {useState, useEffect} from 'react'
 import {useParams} from 'next/navigation'
 import Image from 'next/image'
 
+type typeProp = {
+  type: {
+    name: string
+  }
+}
+
+type PokemonProp = {
+	name: string
+	sprites: {
+		[key: string]: string
+	}
+	types: typeProp[]
+	id: number
+	height: number
+	weight: number
+}
+
 export default function Pokemon() {
-	const [pokemon, setPokemon] = useState('')
+	const [pokemon, setPokemon] = useState<PokemonProp | null>(null)
 	const {pokemonid} = useParams()
 
   useEffect(() => {
   	fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonid}`)
   	.then(res => res.json())
   	.then(pokemon => setPokemon(pokemon))
-  }, [])
+  }, [pokemonid])
 
   if (!pokemon) return null
   return (
@@ -25,7 +42,7 @@ export default function Pokemon() {
         alt={pokemon.name}
       />
       <div>
-      	<h3 className='text-xl mx-auto my-2'>Number: </h3>
+      	<h3 className='text-xl mx-auto my-2'>Number:</h3>
 	      <p> #{pokemon.id}</p>
       </div>
       <div>

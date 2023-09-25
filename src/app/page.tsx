@@ -11,7 +11,6 @@ type dataProp = {
 export type Pokemon = {
   name: string
   url: string
-  id?: number
 }
 
 export default async function Home() {
@@ -19,7 +18,6 @@ export default async function Home() {
   const api = 'https://pokeapi.co/api/v2/pokemon/'
   const res = await fetch(`${api}/?limit=${maxPokemons}`)
   const data: dataProp = await res.json()
-
 
   return (
     <>
