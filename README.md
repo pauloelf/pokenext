@@ -22,14 +22,11 @@
   $ cd pokenext
 ```
 ```bash
-  # Instale as dependências
-  $ npm install
-  ---/ ou /---
-  $ pnpm install
-```
-```bash
   # Inicie o projeto
   $ npm run dev
-  ---/ ou /---
-  $ pnpm run dev
+  # ou
+  $ yarn dev
+  # ou
+  $ pnpm dev
 ```
+Abra http://localhost:3000 no seu navegador para ver o resultado
